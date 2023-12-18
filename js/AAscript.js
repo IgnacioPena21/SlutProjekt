@@ -31,11 +31,14 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => {
-    console.log(data.result[Math.floor(Math.random() * 25)].name);
+    //console.log(data.result[Math.floor(Math.random() * 25)].name);
     function RandPlayer(Player){
+        document.getElementById("player").innerHtml = (`Your Player is ${Player}`);
         
-        document.getElementById("RandPlayer").onclick = alert(`Your Player is ${Player}`);
     }
-    RandPlayer(data.result[Math.floor(Math.random() * 25)].name);
+   var btn = document.getElementById("button");
+    btn.addEventListener("click" , RandPlayer(data.result[Math.random() * 25].name), {
+
+    });
 
   })
