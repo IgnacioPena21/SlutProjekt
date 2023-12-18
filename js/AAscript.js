@@ -6,7 +6,7 @@ fetch('https://thesportsdb.com/api/v1/json/3/all_sports.php?id=%22102%22')
 .then(data => {
     console.log(data);
     function Explanation(Futinfo){
-        document.getElementById("FutInfo").innerHTML = `Information about the Football:<br>${Futinfo}`;
+        document.getElementById("FutInfo").innerHTML = `<h2><b>Information about the Football:</b></h2><br>${Futinfo}`;
 
     }
     Explanation(data.sports[0].strSportDescription);
