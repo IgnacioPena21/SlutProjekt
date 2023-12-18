@@ -37,15 +37,3 @@ fetch(url, {
   }
   Letsgo()
   })
-
-  //https://thesportsdb.com/api/v1/json/3/searchloves.php?u=zag
-/*fetch('https://thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34145938')
-.then(res => res.json())
-.then(data2 => {
-    console.log(data2);
-
- //   function RandPlayer(Player){
-       // console.log(`This is your Player: ${Player}`);
-    //}
-    //RandPlayer(data.players[Math.random() * 221])
-})*/

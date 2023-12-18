@@ -7,7 +7,6 @@ body{
     position: fixed;
 }
 
-
 .head{
     margin: 2%;
     background-image:none;
@@ -20,7 +19,6 @@ body{
     border-radius: 2%;
    }
 
-
 .slut{
     margin: 2%;
     display: flex;
@@ -28,10 +26,7 @@ body{
     justify-content: center;
     align-content: flex-end;
     margin-bottom: 0px;
-
-
 }
-
 
 .links{
     display:flex;
