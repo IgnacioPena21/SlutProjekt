@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FootGoats</title>
+    <title>RandFootball</title>
     <link rel="stylesheet" href="./css/AAstyle.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
-
-        <div id="head">
-            <h1 id="welcome">WELCOME TO FOOTGOATS!</h1><br>
+        <div id="head" class="head text-light ">
+            <h1 id="welcome">WELCOME TO RANDFOOTBALL!</h1><br>
             <p><b>Push the button below to get a random player image!</b></p>
             <p id="FutInfo"></p>
         </div>
-<div id="btnRandom">
 
-    <button id="button">Click me</button>
-    <p id="player"></p>
-</div>
+
+        <div id="btnRandom">
+            <button id="button" onclick="Letsgo()" class="btn btn-primary btn-outline-dark ">Click me</button>
+            <p id="player"class=" "></p>
+        </div>
     
 
-        <div class="container d-flex flex-column align-items-end justify-content-end">
-            <h3 id="AbMe">About me:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium facere vel, mollitia consequuntur iure iusto adipisci neque libero perferendis! Voluptatibus beatae, possimus quos laudantium architecto earum eaque est at voluptas.</p>
+        <div class="slut bagde text-light bg-dark .hover-overlay ">    
+            <h3 id="AbMe">About me:</h3>           
             <h4>My social media:</h4>
-
-                <ul class="links">
-                    <li><a href="https://www.instagram.com/p/BgSlRglAKBn/" class="links">Instagram</a></li>
-                    <li><a href="https://twitter.com/?lang=sv" class="links">X/Twitter</a></li>
-                    <li><a href="ignacio.penasepulveda@elev.ntig.se" class="links">Outlook</a></li>
-                </ul>
+                <div class="links">
+                    <a class="badge bg-danger color-light " href="https://www.instagram.com/p/BgSlRglAKBn/" class="links">Instagram</a>
+                    <a class="badge bg-dark color-light" href="https://twitter.com/?lang=sv" class="links">X/Twitter</a>
+                    <a class="badge bg-info color-light" href="ignacio.penasepulveda@elev.ntig.se" class="links">Outlook</a>
+                </div>
+                <p>This webpage was a project for a web development course.<br>Even though it's simple I am using Bootstrap for styling as well as css and used two different API to get the information about football andalso to get the names of football players.</p>
+                <h4>Thanks for visiting this website!</h4> 
             <hr>
             <p>&copy; NTI Gymnasiet Södertörn</p>
         </div>
         
-
-    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/AAscript.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
 </body>
 </html>

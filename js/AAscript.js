@@ -1,3 +1,6 @@
+//Med detta fetch har jag använt en API för att kunna hämta imformation om fotboll
+//Jag ville använda den för andra funktioner men den är tyvärr mycket begränsad
+//för några listor
 fetch('https://thesportsdb.com/api/v1/json/3/all_sports.php?id=%22102%22')
 .then(res => res.json())
 .then(data => {
@@ -8,18 +11,9 @@ fetch('https://thesportsdb.com/api/v1/json/3/all_sports.php?id=%22102%22')
     }
     Explanation(data.sports[0].strSportDescription);
 } )
-//https://thesportsdb.com/api/v1/json/3/searchloves.php?u=zag
-/*fetch('https://thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34145938')
-.then(res => res.json())
-.then(data2 => {
-    console.log(data2);
-
- //   function RandPlayer(Player){
-       // console.log(`This is your Player: ${Player}`);
-    //}
-    //RandPlayer(data.players[Math.random() * 221])
-})*/
-
+//Den här fetch har jag försökt att förenkla lite från den som fanns när jag ville hämta API key 
+//Med den jag vill fetch:a namn på några fotboll spelare och när användare trycker en knapp 
+//ska den retunera en random spelare.
 const url = 'https://soccer-football-info.p.rapidapi.com/players/list/?c=all&p=1';
 
 fetch(url, {
@@ -31,14 +25,27 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => {
-    //console.log(data.result[Math.floor(Math.random() * 25)].name);
-    function RandPlayer(Player){
-        document.getElementById("player").innerHtml = (`Your Player is ${Player}`);
-        
-    }
-   var btn = document.getElementById("button");
-    btn.addEventListener("click" , RandPlayer(data.result[Math.random() * 25].name), {
 
-    });
-
+  function RandPlayer(Player){
+    document.getElementById("player").innerText = (`Your Player is ${Player}`);
+  }
+  
+  function Letsgo(){
+  document.getElementById("button").onclick = function() {
+    RandPlayer(data.result[Math.floor(Math.random() * 25)].name);
+  }
+  }
+  Letsgo()
   })
+
+  //https://thesportsdb.com/api/v1/json/3/searchloves.php?u=zag
+/*fetch('https://thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34145938')
+.then(res => res.json())
+.then(data2 => {
+    console.log(data2);
+
+ //   function RandPlayer(Player){
+       // console.log(`This is your Player: ${Player}`);
+    //}
+    //RandPlayer(data.players[Math.random() * 221])
+})*/
